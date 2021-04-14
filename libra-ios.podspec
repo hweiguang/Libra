@@ -1,9 +1,10 @@
 Pod::Spec.new do |s|
     s.name             = 'libra-ios'
     s.version          = '0.1.0'
-    s.summary          = ''
+    s.summary          = 'Common functions that I use in my iOS apps'
     
     s.description      = <<-DESC
+    Common functions that I use in my iOS apps
     DESC
     
     s.homepage         = 'https://github.com/hweiguang/libra-ios'
