@@ -1,7 +1,6 @@
 //
 //  URL+Extension.swift
 //
-//  Created by Wei Guang on 24/3/21.
 //  Copyright © 2021 Wei Guang. All rights reserved.
 //
 
