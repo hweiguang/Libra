@@ -23,6 +23,12 @@ public struct AppUtility {
         }
     }
     
+    public static var documentDirectoryUrl: URL? {
+        get {
+            return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        }
+    }
+    
     public static var formattedBundleVersion: String {
         get {
             return "v\(versionNumber)(\(buildNumber))"
