@@ -17,15 +17,9 @@ public struct AppUtility {
         }
     }
     
-    public static var documentDirectory: String {
+    public static var documentDirectory: String? {
         get {
-            return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.path  ?? "N.A"
-        }
-    }
-    
-    public static var documentDirectoryUrl: URL? {
-        get {
-            return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+            return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.path
         }
     }
     
