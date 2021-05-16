@@ -56,11 +56,13 @@ open class BaseViewController: UIViewController {
         present(alertController, animated: true)
     }
     
+    #if !os(tvOS)
     public func presentInAppSafari(url: URL) {
         let safariViewController = SFSafariViewController(url: url)
         safariViewController.delegate = self
         present(safariViewController, animated: true)
     }
+    #endif
 }
 
 #if !os(tvOS)
