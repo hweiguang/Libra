@@ -4,6 +4,7 @@
 //  Copyright © 2021 Wei Guang. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 @IBDesignable
@@ -25,3 +26,4 @@ public class IBLabel: UILabel {
         }
     }
 }
+#endif

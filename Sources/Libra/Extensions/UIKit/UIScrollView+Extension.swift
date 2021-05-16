@@ -4,6 +4,7 @@
 //  Copyright © 2021 Wei Guang. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 public extension UIScrollView {
@@ -18,3 +19,4 @@ public extension UIScrollView {
         self.setContentOffset(CGPoint(x: 0, y: Int(self.frame.size.height) * page), animated: animated)
     }
 }
+#endif

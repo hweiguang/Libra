@@ -4,6 +4,7 @@
 //  Copyright © 2021 Wei Guang. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 public extension UITableView {
@@ -23,3 +24,4 @@ public extension UITableView {
         return cell
     }
 }
+#endif

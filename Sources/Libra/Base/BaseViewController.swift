@@ -4,10 +4,9 @@
 //  Copyright © 2021 Wei Guang. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
-#if !os(tvOS)
 import SafariServices
-#endif
 
 open class BaseViewController: UIViewController {
     public func showAlert(title: String?,
@@ -56,19 +55,17 @@ open class BaseViewController: UIViewController {
         present(alertController, animated: true)
     }
     
-    #if !os(tvOS)
     public func presentInAppSafari(url: URL) {
         let safariViewController = SFSafariViewController(url: url)
         safariViewController.delegate = self
         present(safariViewController, animated: true)
     }
-    #endif
 }
 
-#if !os(tvOS)
 extension BaseViewController: SFSafariViewControllerDelegate {
     public func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         dismiss(animated: true)
     }
 }
 #endif
+
