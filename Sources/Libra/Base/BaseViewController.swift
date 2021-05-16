@@ -5,7 +5,9 @@
 //
 
 import UIKit
+#if !os(tvOS)
 import SafariServices
+#endif
 
 open class BaseViewController: UIViewController {
     public func showAlert(title: String?,
@@ -61,8 +63,10 @@ open class BaseViewController: UIViewController {
     }
 }
 
+#if !os(tvOS)
 extension BaseViewController: SFSafariViewControllerDelegate {
     public func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         dismiss(animated: true)
     }
 }
+#endif
