@@ -1,9 +1,8 @@
 //
 //  DateUtility.swift
-//  Affinity
 //
-//  Created by Wei Guang on 28/2/21.
-//  Copyright © 2021 Wei Guang. All rights reserved.
+//
+//  Created by Wei Guang
 //
 
 import Foundation

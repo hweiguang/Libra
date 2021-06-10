@@ -1,7 +1,8 @@
 //
 //  UIView+Extension.swift
 //
-//  Copyright © 2021 Wei Guang. All rights reserved.
+//
+//  Created by Wei Guang
 //
 
 #if os(iOS)
