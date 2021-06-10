@@ -9,9 +9,9 @@
 import UIKit
 
 public class UIStoryboardSegueWithCompletion: UIStoryboardSegue {
-    var completion: (() -> Void)?
+    public var completion: (() -> Void)?
     
-    override func perform() {
+    public override func perform() {
         super.perform()
         completion?()
     }
