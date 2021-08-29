@@ -30,13 +30,13 @@ public struct AppUtility {
         }
     }
     
-    static var versionNumber: String {
+    public static var versionNumber: String {
         get {
             return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "N.A"
         }
     }
     
-    static var buildNumber: String {
+    public static var buildNumber: String {
         get {
             return Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "N.A"
         }
