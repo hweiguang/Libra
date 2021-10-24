@@ -56,6 +56,11 @@ open class BaseViewController: UIViewController {
         present(alertController, animated: true)
     }
     
+    public func showShareSheet(items: [Any]) {
+        let activityViewController = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(activityViewController, animated: true)
+    }
+
     public func presentInAppSafari(url: URL) {
         let safariViewController = SFSafariViewController(url: url)
         safariViewController.delegate = self
