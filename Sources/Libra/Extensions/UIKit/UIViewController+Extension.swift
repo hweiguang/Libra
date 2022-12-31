@@ -1,6 +1,6 @@
 //
-//  BaseViewController.swift
-//
+//  UIViewController+Extension.swift
+//  
 //
 //  Created by Wei Guang
 //
@@ -9,10 +9,12 @@
 import UIKit
 import SafariServices
 
-open class BaseViewController: UIViewController {
-    public func showAlert(title: String?,
-                          message: String?,
-                          handler: ((UIAlertAction) -> Void)? = nil) {
+public typealias AlertActionHandler = ((UIAlertAction) -> Void)?
+
+public extension UIViewController {
+    func showAlert(title: String?,
+                   message: String?,
+                   handler: AlertActionHandler = nil) {
         let alertController = UIAlertController(title: title,
                                                 message: message,
                                                 preferredStyle: .alert)
@@ -25,10 +27,10 @@ open class BaseViewController: UIViewController {
         present(alertController, animated: true)
     }
     
-    public func showConfirmationAlert(title: String?,
-                                      message: String?,
-                                      okHandler: ((UIAlertAction) -> Void)? = nil,
-                                      cancelHandler: ((UIAlertAction) -> Void)? = nil) {
+    func showConfirmationAlert(title: String?,
+                               message: String?,
+                               okHandler: AlertActionHandler = nil,
+                               cancelHandler: AlertActionHandler = nil) {
         let alertController = UIAlertController(title: title,
                                                 message: message,
                                                 preferredStyle: .alert)
@@ -46,7 +48,7 @@ open class BaseViewController: UIViewController {
         present(alertController, animated: true)
     }
     
-    public func showGenericErrorAlert() {
+    func showGenericErrorAlert() {
         let alertController = UIAlertController(title: NSLocalizedString("Oops", comment: "Oops"),
                                                 message: NSLocalizedString("Something went wrong. Please try again.",
                                                                            comment: "Something went wrong. Please try again."),
@@ -56,22 +58,9 @@ open class BaseViewController: UIViewController {
         present(alertController, animated: true)
     }
     
-    public func showShareSheet(items: [Any]) {
+    func showShareSheet(items: [Any]) {
         let activityViewController = UIActivityViewController(activityItems: items, applicationActivities: nil)
         present(activityViewController, animated: true)
     }
-
-    public func presentInAppSafari(url: URL) {
-        let safariViewController = SFSafariViewController(url: url)
-        safariViewController.delegate = self
-        present(safariViewController, animated: true)
-    }
-}
-
-extension BaseViewController: SFSafariViewControllerDelegate {
-    public func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        dismiss(animated: true)
-    }
 }
 #endif
-
