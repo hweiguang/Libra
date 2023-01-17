@@ -13,9 +13,13 @@ public extension UITableView {
         self.tableFooterView = UIView(frame: .zero)
     }
     
-    func register<T: UITableViewCell>(_: T.Type) {
+    func register<T: UITableViewCell>(nib: T.Type) {
         let nib = UINib(nibName: String(describing: T.self), bundle: nil)
-        self.register(nib, forCellReuseIdentifier: String(describing: T.self))
+        register(nib, forCellReuseIdentifier: String(describing: T.self))
+    }
+    
+    func register<T: UITableViewCell>(_: T.Type) {
+        register(T.self, forCellReuseIdentifier: String(describing: T.self))
     }
     
     func dequeueReusableCell<T: UITableViewCell>(_: T.Type) -> T {
