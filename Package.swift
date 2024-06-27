@@ -11,12 +11,11 @@ let package = Package(
             name: "Libra",
             targets: ["Libra"]),
     ],
-    dependencies: [
-        
-    ],
     targets: [
         .target(
-            name: "Libra",
-            dependencies: []),
+            name: "Libra"),
+        .testTarget(
+            name: "LibraTests",
+            dependencies: ["Libra"]),
     ]
 )
