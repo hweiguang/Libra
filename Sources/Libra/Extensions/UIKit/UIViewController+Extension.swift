@@ -5,9 +5,8 @@
 //  Created by Wei Guang
 //
 
-#if os(iOS)
+#if canImport(UIKit)
 import UIKit
-import SafariServices
 
 public typealias AlertActionHandler = ((UIAlertAction) -> Void)?
 

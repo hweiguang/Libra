@@ -5,7 +5,7 @@
 //  Created by Wei Guang
 //
 
-#if os(iOS)
+#if canImport(UIKit)
 import UIKit
 
 public extension UITableView {
