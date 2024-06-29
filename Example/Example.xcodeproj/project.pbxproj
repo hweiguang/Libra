@@ -11,6 +11,7 @@
 		873E6BA92C2FF5E900E4786B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873E6BA82C2FF5E900E4786B /* ContentView.swift */; };
 		873E6BAB2C2FF5EA00E4786B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 873E6BAA2C2FF5EA00E4786B /* Assets.xcassets */; };
 		873E6BAF2C2FF5EA00E4786B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 873E6BAE2C2FF5EA00E4786B /* Preview Assets.xcassets */; };
+		87B38AE42C2FF8C600AF6E89 /* Libra in Frameworks */ = {isa = PBXBuildFile; productRef = 87B38AE32C2FF8C600AF6E89 /* Libra */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		873E6BAA2C2FF5EA00E4786B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		873E6BAC2C2FF5EA00E4786B /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
 		873E6BAE2C2FF5EA00E4786B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		87B38AE12C2FF8B300AF6E89 /* Libra */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Libra; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87B38AE42C2FF8C600AF6E89 /* Libra in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,7 +40,9 @@
 			isa = PBXGroup;
 			children = (
 				873E6BA52C2FF5E900E4786B /* Sources */,
+				87B38AE12C2FF8B300AF6E89 /* Libra */,
 				873E6BA42C2FF5E900E4786B /* Products */,
+				87B38AE22C2FF8C600AF6E89 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +74,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		87B38AE22C2FF8C600AF6E89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,6 +97,9 @@
 			dependencies = (
 			);
 			name = Example;
+			packageProductDependencies = (
+				87B38AE32C2FF8C600AF6E89 /* Libra */,
+			);
 			productName = Example;
 			productReference = 873E6BA32C2FF5E900E4786B /* Example.app */;
 			productType = "com.apple.product-type.application";
@@ -359,6 +374,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		87B38AE32C2FF8C600AF6E89 /* Libra */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Libra;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 873E6B9B2C2FF5E900E4786B /* Project object */;
 }
